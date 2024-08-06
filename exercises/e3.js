@@ -9,10 +9,14 @@
  * */
 
 export function getAverage(array) {
-  // Your code goes here...
-
+  let total = 0;
+  for (let i = 0; i < array.length; i++){
+    total += array[i];
+  }
+  return total / array.length;
 }
 
+console.log(getAverage([13, 23, 5, 7, 9]));
 
 /** 
  * PART 2
@@ -22,9 +26,16 @@ export function getAverage(array) {
  * */ 
 
 export function getStringSum(str) {
-  // Your code goes here...
-
+  let sum = 0;
+  for (let i = 0; i < str.length; i++){
+    if (str[i] >= 0 && str[i] <= 100){
+      sum += Number(str[i]);
+    }
+  }
+  return sum;
 }
+
+console.log(getStringSum("GH2U87A"));
 
 
 // === TEST YOURSELF ===
